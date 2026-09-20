@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:title" content="高光透明榜　介面樣張｜VIVISPA 2027">
-<meta property="og:description" content="提案用示意畫面（內部討論，需通行碼）">
+<meta property="og:description" content="提案用示意畫面（內部討論）">
 <meta name="theme-color" content="#0F766E">
 <title>高光透明榜｜介面樣張 v1</title>
 <style>
@@ -203,58 +203,9 @@ tr:last-child td{border-bottom:none}
 .footnote b{color:var(--ink)}
 @media(max-width:900px){.grid80{grid-template-columns:repeat(5,1fr)}.two{grid-template-columns:1fr}
   .kpis{grid-template-columns:1fr 1fr}.desk{min-width:0}}
-
-/* ── DEMO 通行碼門（部署時注入，原稿不含） ── */
-#dz{position:fixed;inset:0;z-index:99999;background:var(--paper,#FAF8F5);
-  display:flex;align-items:center;justify-content:center;padding:24px}
-#dz .box{max-width:400px;width:100%;background:#fff;border:1px solid var(--line,#E6E1D8);
-  border-radius:10px;padding:30px 26px;box-shadow:0 6px 28px rgba(0,0,0,.07)}
-#dz .kk{font-size:11px;letter-spacing:.14em;color:var(--teal,#0F766E);font-weight:700}
-#dz h2{margin:10px 0 4px;font-size:19px;color:var(--ink,#1A1A18);line-height:1.4}
-#dz p{margin:0 0 18px;font-size:13px;color:var(--muted,#7A756C);line-height:1.7}
-#dz input{width:100%;box-sizing:border-box;padding:11px 13px;font-size:15px;
-  border:1px solid var(--line,#E6E1D8);border-radius:7px;font-family:inherit}
-#dz input:focus{outline:2px solid var(--teal,#0F766E);outline-offset:-1px;border-color:transparent}
-#dz button{width:100%;margin-top:10px;padding:11px;font-size:15px;font-weight:700;
-  font-family:inherit;color:#fff;background:var(--teal,#0F766E);border:0;
-  border-radius:7px;cursor:pointer}
-#dz button:hover{opacity:.9}
-#dz .err{color:#B91C1C;font-size:13px;margin-top:9px;display:none}
-#dz .ft{margin-top:18px;padding-top:14px;border-top:1px solid var(--line,#E6E1D8);
-  font-size:11.5px;color:var(--muted,#7A756C);line-height:1.7}
-html.locked body>*:not(#dz){display:none!important}
 </style>
 </head>
 <body>
-<div id="dz"><div class="box">
-  <div class="kk">VIVISPA 2027 · 內部提案</div>
-  <h2>高光透明榜　介面樣張</h2>
-  <p>此為提案用示意畫面，內容尚未定案。請輸入通行碼後檢視。</p>
-  <input id="dzi" type="password" placeholder="通行碼" autocomplete="off"
-         autocapitalize="off" spellcheck="false">
-  <button id="dzb">進入</button>
-  <div class="err" id="dze">通行碼不正確，請再試一次。</div>
-  <div class="ft">畫面中所有門店名稱、日期、案號與數字均為示意，非實際營運資料。<br>
-  本頁僅供內部討論，請勿對外轉發。</div>
-</div></div>
-<script>
-(function(){
-  var K='vivispa2027', S='vivispa_demo_ok';
-  var el=document.getElementById('dz');
-  function open_(){ el.remove(); document.documentElement.classList.remove('locked');
-                    try{sessionStorage.setItem(S,'1');}catch(e){} }
-  try{ if(sessionStorage.getItem(S)==='1'){ open_(); return; } }catch(e){}
-  document.documentElement.classList.add('locked');
-  var i=document.getElementById('dzi'), b=document.getElementById('dzb'),
-      er=document.getElementById('dze');
-  function go(){ if(i.value.trim().toLowerCase()===K){ open_(); }
-                 else { er.style.display='block'; i.value=''; i.focus(); } }
-  b.addEventListener('click', go);
-  i.addEventListener('keydown', function(e){ if(e.key==='Enter') go(); });
-  setTimeout(function(){ i.focus(); }, 120);
-})();
-</script>
-
 <div class="wrap">
 
 <div class="hd">
