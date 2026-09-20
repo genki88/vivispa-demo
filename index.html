@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="高光透明榜　介面樣張｜VIVISPA 2027">
+<meta property="og:description" content="提案用示意畫面（內部討論，需通行碼）">
+<meta name="theme-color" content="#0F766E">
+<title>高光透明榜｜介面樣張 v1</title>
+<style>
+:root{
+  --paper:#FAF8F5; --card:#FFFFFF; --ink:#1A1A18; --muted:#7A756C; --line:#E6E1D8;
+  --teal:#0F766E; --teal-soft:#EAF3F1;
+  --green:#15803D; --green-bg:#E8F5EC;
+  --amber:#B45309; --amber-bg:#FDF3E3;
+  --red:#B91C1C;   --red-bg:#FBEAEA;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:36px 28px 80px}
+
+/* ── header ── */
+.hd{border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:8px}
+.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--teal);font-weight:700}
+h1{font-size:30px;font-weight:800;letter-spacing:-.01em;margin:8px 0 6px}
+.sub{color:var(--muted);font-size:14px}
+.meta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:5px 13px;font-size:12px;color:var(--muted)}
+.chip b{color:var(--ink)}
+
+/* ── jump nav ── */
+nav{position:sticky;top:0;z-index:50;background:rgba(250,248,245,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  padding:11px 0;margin:18px 0 0;display:flex;gap:7px;flex-wrap:wrap}
+nav a{font-size:12.5px;text-decoration:none;color:var(--muted);
+  border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px;white-space:nowrap}
+nav a:hover{color:var(--teal);border-color:var(--teal)}
+
+/* ── section ── */
+section{margin-top:52px;scroll-margin-top:64px}
+.sechd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  border-left:4px solid var(--teal);padding-left:14px;margin-bottom:6px}
+.sechd h2{font-size:21px;font-weight:800}
+.sechd .who{font-size:12px;color:#fff;background:var(--teal);border-radius:5px;padding:2px 9px;font-weight:700}
+.sechd .who.gray{background:var(--muted)}
+.lead{color:var(--muted);font-size:13.5px;margin:0 0 20px 18px;max-width:760px}
+
+/* ── device frames ── */
+.stage{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.phone{width:352px;flex:0 0 352px;background:var(--ink);border-radius:34px;padding:9px;
+  box-shadow:0 18px 44px rgba(26,26,24,.16)}
+.phone .screen{background:var(--card);border-radius:27px;overflow:hidden}
+.notch{height:22px;display:flex;align-items:center;justify-content:center}
+.notch i{display:block;width:80px;height:5px;border-radius:99px;background:#3a3a36}
+
+.desk{flex:1;min-width:560px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(26,26,24,.07)}
+.deskbar{background:#F2EFE9;border-bottom:1px solid var(--line);padding:9px 14px;
+  display:flex;align-items:center;gap:7px}
+.deskbar i{width:9px;height:9px;border-radius:99px;background:#D6D0C6;display:block}
+.deskbar span{margin-left:8px;font-size:11.5px;color:var(--muted)}
+
+/* ── customer page ── */
+.cust{padding:0 0 18px}
+.cust-top{background:var(--ink);color:#fff;padding:17px 19px 19px}
+.cust-top .brand{font-size:10.5px;letter-spacing:.2em;opacity:.65}
+.cust-top .store{font-size:20px;font-weight:800;margin-top:5px}
+.cust-top .month{font-size:12px;opacity:.72;margin-top:3px}
+
+.notice{margin:15px 17px 0;background:var(--teal-soft);border-left:3px solid var(--teal);
+  border-radius:0 9px 9px 0;padding:11px 13px;font-size:12.2px;line-height:1.6}
+.notice b{color:var(--teal)}
+
+.lights{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:15px 17px 0}
+.light{border:1px solid var(--line);border-radius:12px;padding:13px 8px;text-align:center}
+.dot{width:38px;height:38px;border-radius:99px;margin:0 auto 8px;display:flex;
+  align-items:center;justify-content:center;font-size:17px;color:#fff;font-weight:700}
+.g .dot{background:var(--green)} .g{background:var(--green-bg);border-color:#BFE3CB}
+.a .dot{background:var(--amber)} .a{background:var(--amber-bg);border-color:#F0DCB6}
+.r .dot{background:var(--red)}   .r{background:var(--red-bg);border-color:#EFC4C4}
+.light .nm{font-size:12px;font-weight:700;line-height:1.35}
+.light .st{font-size:10.5px;margin-top:4px}
+.g .st{color:var(--green)} .a .st{color:var(--amber)} .r .st{color:var(--red)}
+
+.blk{margin:19px 17px 0}
+.blk h4{font-size:13px;font-weight:800;margin-bottom:9px;display:flex;
+  justify-content:space-between;align-items:baseline}
+.blk h4 em{font-style:normal;font-size:11px;color:var(--muted);font-weight:400}
+
+.tl{border-left:2px solid var(--line);margin-left:5px;padding-left:15px}
+.tl .it{position:relative;padding-bottom:14px}
+.tl .it:last-child{padding-bottom:0}
+.tl .it::before{content:"";position:absolute;left:-21px;top:5px;width:10px;height:10px;
+  border-radius:99px;background:var(--green);border:2px solid #fff;box-shadow:0 0 0 1px var(--green)}
+.tl .it.open::before{background:var(--amber);box-shadow:0 0 0 1px var(--amber)}
+.tl .it .t{font-size:12.5px;font-weight:700}
+.tl .it .d{font-size:11.2px;color:var(--muted);margin-top:2px}
+.tl .it .tag{display:inline-block;font-size:10px;border-radius:4px;padding:1px 7px;margin-top:5px;font-weight:700}
+.tag.done{background:var(--green-bg);color:var(--green)}
+.tag.fix{background:var(--amber-bg);color:var(--amber)}
+
+.badge{display:flex;align-items:center;gap:11px;background:#FBF7EC;border:1px solid #EDDFC0;
+  border-radius:11px;padding:11px 13px}
+.badge .n{font-size:25px;font-weight:800;color:#9A7B22;line-height:1}
+.badge .x{font-size:11.6px;color:#6E5C2E;line-height:1.45}
+
+.btn{display:block;width:calc(100% - 34px);margin:17px 17px 0;text-align:center;
+  border:none;border-radius:11px;padding:14px;font-size:14px;font-weight:800;cursor:pointer;
+  font-family:inherit}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.ghost{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
+.btn.sm{padding:11px;font-size:13px}
+
+.fine{margin:16px 17px 0;font-size:10.8px;color:var(--muted);line-height:1.7;
+  border-top:1px solid var(--line);padding-top:12px}
+.fine b{color:var(--ink)}
+
+/* ── annotation ── */
+.anno{flex:1;min-width:290px;max-width:420px}
+.anno h5{font-size:13px;font-weight:800;margin-bottom:9px;color:var(--teal)}
+.anno ol{list-style:none;counter-reset:a}
+.anno ol li{counter-increment:a;position:relative;padding:0 0 12px 30px;font-size:12.8px;line-height:1.6}
+.anno ol li::before{content:counter(a);position:absolute;left:0;top:1px;width:20px;height:20px;
+  border-radius:99px;background:var(--ink);color:#fff;font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center}
+.anno ol li b{color:var(--ink)}
+.callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--ink);
+  border-radius:0 11px 11px 0;padding:13px 15px;margin-top:14px;font-size:12.5px;line-height:1.65}
+.callout b{color:var(--teal)}
+
+/* ── backend ── */
+.pad{padding:18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.kpi{border:1px solid var(--line);border-radius:11px;padding:12px 13px}
+.kpi .l{font-size:11px;color:var(--muted)}
+.kpi .v{font-size:23px;font-weight:800;margin-top:3px;line-height:1.15}
+.kpi .s{font-size:10.5px;color:var(--muted);margin-top:2px}
+.kpi.alert{background:var(--red-bg);border-color:#EFC4C4} .kpi.alert .v{color:var(--red)}
+.kpi.warn{background:var(--amber-bg);border-color:#F0DCB6} .kpi.warn .v{color:var(--amber)}
+.kpi.ok .v{color:var(--green)}
+
+h3.bh{font-size:13.5px;font-weight:800;margin:20px 0 9px;display:flex;align-items:center;gap:8px}
+h3.bh::before{content:"";width:3px;height:14px;background:var(--teal);border-radius:2px}
+h3.bh em{font-style:normal;font-size:11px;color:var(--muted);font-weight:400}
+
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:#F2EFE9;text-align:left;padding:8px 10px;font-weight:700;font-size:11.2px;
+  color:var(--muted);border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.pill{display:inline-block;font-size:10.5px;font-weight:700;border-radius:5px;padding:2px 8px;white-space:nowrap}
+.pill.r{background:var(--red-bg);color:var(--red)}
+.pill.a{background:var(--amber-bg);color:var(--amber)}
+.pill.g{background:var(--green-bg);color:var(--green)}
+.pill.t{background:var(--teal-soft);color:var(--teal)}
+.pill.k{background:#EFEDE8;color:var(--muted)}
+.mini{font-size:10.8px;color:var(--muted)}
+
+/* store grid 80 */
+.grid80{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:4px}
+.cellx{aspect-ratio:1;border-radius:6px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;font-size:8.6px;font-weight:700;line-height:1.1;
+  border:1px solid transparent;cursor:default}
+.cellx.g{background:var(--green-bg);color:var(--green);border-color:#CBE7D4}
+.cellx.a{background:var(--amber-bg);color:var(--amber);border-color:#F0DCB6}
+.cellx.r{background:var(--red-bg);color:var(--red);border-color:#EFC4C4}
+.cellx.n{background:#F2EFE9;color:#B5AFA4;border-color:var(--line)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:5px}
+.legend i{width:11px;height:11px;border-radius:3px;display:block}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{border:1px solid var(--line);border-radius:11px;padding:14px}
+.box h6{font-size:12.5px;font-weight:800;margin-bottom:8px}
+
+/* store manager card */
+.task{border:1px solid var(--line);border-radius:11px;padding:12px 13px;margin-bottom:9px}
+.task .r1{display:flex;justify-content:space-between;align-items:flex-start;gap:9px}
+.task .tt{font-size:13px;font-weight:700;line-height:1.4}
+.task .mt{font-size:11.2px;color:var(--muted);margin-top:4px}
+.task .act{margin-top:9px;display:flex;gap:7px}
+.task .act button{flex:1;font-family:inherit;font-size:11.5px;font-weight:700;border-radius:8px;
+  padding:8px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.task .act button.p{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+/* flow */
+.flow{display:flex;gap:9px;flex-wrap:wrap;align-items:stretch;margin-top:4px}
+.step{flex:1;min-width:135px;background:var(--card);border:1px solid var(--line);
+  border-radius:11px;padding:12px 13px}
+.step .n{font-size:10px;font-weight:800;color:var(--teal);letter-spacing:.1em}
+.step .t{font-size:12.8px;font-weight:700;margin:4px 0 4px}
+.step .d{font-size:11.2px;color:var(--muted);line-height:1.55}
+
+.footnote{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;
+  font-size:11.5px;color:var(--muted);line-height:1.8}
+.footnote b{color:var(--ink)}
+@media(max-width:900px){.grid80{grid-template-columns:repeat(5,1fr)}.two{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr 1fr}.desk{min-width:0}}
+
+/* ── DEMO 通行碼門（部署時注入，原稿不含） ── */
+#dz{position:fixed;inset:0;z-index:99999;background:var(--paper,#FAF8F5);
+  display:flex;align-items:center;justify-content:center;padding:24px}
+#dz .box{max-width:400px;width:100%;background:#fff;border:1px solid var(--line,#E6E1D8);
+  border-radius:10px;padding:30px 26px;box-shadow:0 6px 28px rgba(0,0,0,.07)}
+#dz .kk{font-size:11px;letter-spacing:.14em;color:var(--teal,#0F766E);font-weight:700}
+#dz h2{margin:10px 0 4px;font-size:19px;color:var(--ink,#1A1A18);line-height:1.4}
+#dz p{margin:0 0 18px;font-size:13px;color:var(--muted,#7A756C);line-height:1.7}
+#dz input{width:100%;box-sizing:border-box;padding:11px 13px;font-size:15px;
+  border:1px solid var(--line,#E6E1D8);border-radius:7px;font-family:inherit}
+#dz input:focus{outline:2px solid var(--teal,#0F766E);outline-offset:-1px;border-color:transparent}
+#dz button{width:100%;margin-top:10px;padding:11px;font-size:15px;font-weight:700;
+  font-family:inherit;color:#fff;background:var(--teal,#0F766E);border:0;
+  border-radius:7px;cursor:pointer}
+#dz button:hover{opacity:.9}
+#dz .err{color:#B91C1C;font-size:13px;margin-top:9px;display:none}
+#dz .ft{margin-top:18px;padding-top:14px;border-top:1px solid var(--line,#E6E1D8);
+  font-size:11.5px;color:var(--muted,#7A756C);line-height:1.7}
+html.locked body>*:not(#dz){display:none!important}
+</style>
+</head>
+<body>
+<div id="dz"><div class="box">
+  <div class="kk">VIVISPA 2027 · 內部提案</div>
+  <h2>高光透明榜　介面樣張</h2>
+  <p>此為提案用示意畫面，內容尚未定案。請輸入通行碼後檢視。</p>
+  <input id="dzi" type="password" placeholder="通行碼" autocomplete="off"
+         autocapitalize="off" spellcheck="false">
+  <button id="dzb">進入</button>
+  <div class="err" id="dze">通行碼不正確，請再試一次。</div>
+  <div class="ft">畫面中所有門店名稱、日期、案號與數字均為示意，非實際營運資料。<br>
+  本頁僅供內部討論，請勿對外轉發。</div>
+</div></div>
+<script>
+(function(){
+  var K='vivispa2027', S='vivispa_demo_ok';
+  var el=document.getElementById('dz');
+  function open_(){ el.remove(); document.documentElement.classList.remove('locked');
+                    try{sessionStorage.setItem(S,'1');}catch(e){} }
+  try{ if(sessionStorage.getItem(S)==='1'){ open_(); return; } }catch(e){}
+  document.documentElement.classList.add('locked');
+  var i=document.getElementById('dzi'), b=document.getElementById('dzb'),
+      er=document.getElementById('dze');
+  function go(){ if(i.value.trim().toLowerCase()===K){ open_(); }
+                 else { er.style.display='block'; i.value=''; i.focus(); } }
+  b.addEventListener('click', go);
+  i.addEventListener('keydown', function(e){ if(e.key==='Enter') go(); });
+  setTimeout(function(){ i.focus(); }, 120);
+})();
+</script>
+
+<div class="wrap">
+
+<div class="hd">
+  <div class="eyebrow">VIVISPA 2027 ｜ 方針二 沉浸式多感官高光體驗</div>
+  <h1>高光透明榜 — 介面樣張</h1>
+  <div class="sub">掃 QR/一觸即發 之後看到什麼、燈號怎麼定義、後台管什麼、80 家店怎麼管</div>
+  <div class="meta">
+    <span class="chip">門店數 <b>80 家</b></span>
+    <span class="chip">分區 <b>6 區 · 每區約 13 店</b></span>
+    <span class="chip">神秘客 <b>80 次／月</b></span>
+    <span class="chip">總部專責 <b>2 人（例外管理）</b></span>
+    <span class="chip">版本 <b>樣張 v1 · tav</b></span>
+  </div>
+</div>
+
+<nav>
+  <a href="#s1">① 顧客掃 QR/一觸即發 的頁面</a>
+  <a href="#s2">② 燈號定義</a>
+  <a href="#s3">③ 我也遇到（通報）</a>
+  <a href="#s4">④ 總部戰情室 80 店</a>
+  <a href="#s5">⑤ 店端：本月要修三件事</a>
+  <a href="#s6">⑥ 神秘客填報</a>
+  <a href="#s7">⑦ 80 店怎麼管（例外管理）</a>
+  <a href="#s8">⑧ 上線步驟與預算</a>
+</nav>
+
+<!-- ========= 1 ========= -->
+<section id="s1">
+  <div class="sechd"><h2>① 顧客掃 QR/一觸即發 之後看到的頁面</h2><span class="who">顧客端 · 手機</span></div>
+  <p class="lead">原則：一屏看完狀態，滑一次看完紀錄。不放廣告、不放課程、不放優惠、不要求登入。
+  這頁唯一的任務是讓她在進門前 20 秒內判斷「這家店現在的狀態」。</p>
+
+  <div class="stage">
+    <div class="phone"><div class="screen"><div class="notch"><i></i></div>
+      <div class="cust">
+        <div class="cust-top">
+          <div class="brand">VIVISPA 高光透明榜</div>
+          <div class="store">內湖旗艦館</div>
+          <div class="month">2027 年 9 月狀態 · 9/18 更新</div>
+        </div>
+
+        <div class="notice">
+          <b>紅燈不代表這家店不好</b>，代表有一個問題被抓到、而且正在修。
+          有紅燈但 5 天內修好，比永遠全綠更可信。
+        </div>
+
+        <div class="lights">
+          <div class="light g"><div class="dot">✓</div><div class="nm">體驗<br>一致性</div><div class="st">本月無待修</div></div>
+          <div class="light a"><div class="dot">!</div><div class="nm">環境<br>與衛生</div><div class="st">改善中 第3天</div></div>
+          <div class="light g"><div class="dot">✓</div><div class="nm">服務<br>不推銷</div><div class="st">本月無待修</div></div>
+        </div>
+
+        <div class="blk">
+          <h4>本月被指出什麼<em>神秘客 9/03、9/16 查訪</em></h4>
+          <div class="tl">
+            <div class="it open">
+              <div class="t">更衣區溫度偏低</div>
+              <div class="d">9/16 神秘客指出 · 已排定 9/21 完成空調分區調整</div>
+              <span class="tag fix">改善中 · 第 3 天</span>
+            </div>
+            <div class="it">
+              <div class="t">療程結束後等候時間過長</div>
+              <div class="d">9/03 指出 → 9/07 完成（調整交接班重疊 15 分鐘）</div>
+              <span class="tag done">4 天修復</span>
+            </div>
+            <div class="it">
+              <div class="t">主題療癒月香氛濃度未達標</div>
+              <div class="d">9/03 指出 → 9/05 完成（更換擴香模組）</div>
+              <span class="tag done">2 天修復</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blk">
+          <div class="badge">
+            <div class="n">7</div>
+            <div class="x"><b>服務不推銷</b> 連續 7 個月零待修<br>本店平均修復天數 3.1 天（全品牌 4.2 天）</div>
+          </div>
+        </div>
+
+        <button class="btn dark">我在這次療程中遇到問題</button>
+        <button class="btn ghost sm">看附近其他門店的狀態</button>
+
+        <div class="fine">
+          <b>誰查的｜</b>獨立第三方神秘客，每月至少 1 次，店端事前不知道日期。<br>
+          <b>誰能改這頁｜</b>狀態由系統自動產生，門店與業務端無權修改或下架。<br>
+          <b>不公開什麼｜</b>店與店的排名、分數、個別美療師的評分。我們不用這頁比較門店，也不用它考核同仁。
+        </div>
+      </div>
+    </div></div>
+
+    <div class="anno">
+      <h5>這頁上為什麼只有這些東西</h5>
+      <ol>
+        <li><b>三個燈，不是三個分數。</b>分數會被比較、被截圖做成排行榜，我們不給分數，只給狀態。</li>
+        <li><b>「紅燈說明」放在燈的上面，不是下面。</b>顧客看到紅色的第一秒會誤解，解釋必須先到。</li>
+        <li><b>時間軸公開修復天數。</b>這是整頁的真正主角——顧客買的不是完美，是「出事你多快處理」。</li>
+        <li><b>徽章給「連續零待修月數」，不給星等。</b>星等是評價，月數是紀錄，紀錄不可爭辯。</li>
+        <li><b>頁尾三行講清楚遊戲規則。</b>誰查、誰不能改、不公開什麼。沒有這三行，整頁會被當成行銷素材。</li>
+        <li><b>零登入、零表單、零優惠。</b>一旦這頁開始賣東西，公信力當天歸零。</li>
+      </ol>
+      <div class="callout">
+        <b>一句話定位：</b>這不是一個行銷頁，是一份公開的維修紀錄。它的說服力完全來自於「連壞的也寫上去」——
+        只要有一次我們把紅燈藏起來被抓到，這個資產就永久報廢。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= 2 ========= -->
+<section id="s2">
+  <div class="sechd"><h2>② 燈號定義：是紅綠燈，但紅燈的意思不是「這家店爛」</h2><span class="who gray">規則</span></div>
+  <p class="lead">燈號衡量的是「待修項目的處理狀態」，不是「服務好壞的評分」。
+  這個定義是整案能不能被加盟主接受的關鍵——如果紅燈等於負評，沒有一家店會同意公開。</p>
+
+  <div class="desk"><div class="deskbar"><i></i><i></i><i></i><span>燈號規則（公開於顧客頁與加盟主手冊）</span></div>
+  <div class="pad">
+    <table>
+      <tr><th style="width:90px">燈號</th><th style="width:170px">顧客看到的字</th><th>判定規則</th><th style="width:230px">為什麼這樣設計</th></tr>
+      <tr>
+        <td><span class="pill g">● 綠</span></td>
+        <td><b>本月無待修</b></td>
+        <td>本月神秘客查訪於該維度未指出待修項目，或指出項目已全數完成改善。</td>
+        <td>綠不等於完美，等於「這個月沒被抓到問題，或抓到的都修完了」。</td>
+      </tr>
+      <tr>
+        <td><span class="pill a">● 黃</span></td>
+        <td><b>改善中 · 第 N 天</b></td>
+        <td>有待修項目，且在 7 天承諾期內處理中。顯示第幾天，不顯示扣分。</td>
+        <td>黃燈是正常狀態，不是壞事。一年有黃燈的店反而證明稽核是真的在查。</td>
+      </tr>
+      <tr>
+        <td><span class="pill r">● 紅</span></td>
+        <td><b>逾期未完成 · 第 N 天</b></td>
+        <td>待修項目超過 7 天未完成改善，或同一項目本月第 3 次被指出。</td>
+        <td>紅燈罰的是「不修」，不是「有問題」。這條界線讓門店知道努力的方向是速度。</td>
+      </tr>
+      <tr>
+        <td><span class="pill k">○ 灰</span></td>
+        <td><b>本月尚未查訪</b></td>
+        <td>該月神秘客尚未到訪（月中常見）。灰燈也照實顯示，不隱藏。</td>
+        <td>連「還沒查」都公開，顧客才會相信「已查」的結果是真的。</td>
+      </tr>
+    </table>
+
+    <h3 class="bh">三個維度分別在查什麼 <em>每季輪替題目，店端事前不知道考題</em></h3>
+    <div class="two">
+      <div class="box">
+        <h6>1. 體驗一致性</h6>
+        <div class="mini">迎賓與帶位流程、療程時長與手技步驟是否符合標準、當月主題療癒月的指定項目是否落實、
+        療後說明是否完整。<br><br><b>對應方針二：</b>多感官沉浸艙標準化、主題療癒月、手技回訓。</div>
+      </div>
+      <div class="box">
+        <h6>2. 環境與衛生</h6>
+        <div class="mini">光／香／音／溫度五感設定值、備品與織品更換、更衣與淋浴區清潔、
+        器械消毒紀錄可查。<br><br><b>對應方針二：</b>光香音觸溫度全面統一，確保全國體驗一致性。</div>
+      </div>
+      <div class="box" style="grid-column:1/-1">
+        <h6>3. 服務不推銷</h6>
+        <div class="mini">療程進行中是否出現課程／優惠／方案等銷售行為（此項與 C1 零推銷契約共用同一查核標準）、
+        療程前是否當面說出承諾句、療後 7 日內是否有催單來電。<br><br>
+        <b>注意：</b>此維度是三個燈裡顧客最在意、也是全產業負面聲量最大的一項。它同時是本案的燈號、也是 C1 的稽核來源，一次查核兩案共用。</div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ========= 3 ========= -->
+<section id="s3">
+  <div class="sechd"><h2>③ 「我也遇到」通報：顧客按下去之後發生什麼</h2><span class="who">顧客端 · 手機</span></div>
+  <p class="lead">不做評分、不做問卷、不要求填個資。三個選項對應三個燈，一句補充，送出即生成案號並開始 48 小時倒數。</p>
+
+  <div class="stage">
+    <div class="phone"><div class="screen"><div class="notch"><i></i></div>
+      <div class="cust">
+        <div class="cust-top" style="background:var(--teal)">
+          <div class="brand">內湖旗艦館 · 9/19</div>
+          <div class="store">你遇到的是哪一種？</div>
+        </div>
+        <div class="blk" style="margin-top:16px">
+          <div class="task"><div class="r1"><div class="tt">流程和說明的不一樣</div></div>
+            <div class="mt">時長、步驟、主題項目沒做到</div></div>
+          <div class="task" style="border-color:var(--teal);border-width:2px;background:var(--teal-soft)">
+            <div class="r1"><div class="tt">環境讓我不舒服</div><span class="pill t">已選</span></div>
+            <div class="mt">溫度、氣味、清潔、備品</div></div>
+          <div class="task"><div class="r1"><div class="tt">療程中有人跟我推銷</div></div>
+            <div class="mt">此項同時觸發 C1 零推銷契約 · 當次療程全額退費</div></div>
+        </div>
+        <div class="blk">
+          <h4>想補充一句嗎？<em>選填</em></h4>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 12px;
+            font-size:12.2px;color:var(--muted);min-height:64px">更衣區真的滿冷的，吹到有點抖⋯⋯</div>
+        </div>
+        <button class="btn dark">送出</button>
+        <div class="fine">送出後由 <b>總部督導</b>（不是門店）在 48 小時內回覆你。
+        你的通報不會被轉給當天服務你的美療師，也不會影響她的薪資或考核。</div>
+      </div>
+    </div></div>
+
+    <div class="phone"><div class="screen"><div class="notch"><i></i></div>
+      <div class="cust">
+        <div class="cust-top" style="background:var(--green)">
+          <div class="brand">已收到</div>
+          <div class="store">案號 #IW-0919-042</div>
+          <div class="month">總部督導 林〇〇 已接手</div>
+        </div>
+        <div class="blk" style="margin-top:17px">
+          <div class="badge" style="background:var(--green-bg);border-color:#BFE3CB">
+            <div class="n" style="color:var(--green)">47<span style="font-size:13px">:12</span></div>
+            <div class="x" style="color:#1F5B34">距離 48 小時回覆期限<br>逾時將自動升級至營運副總</div>
+          </div>
+        </div>
+        <div class="blk">
+          <h4>接下來會發生什麼</h4>
+          <div class="tl">
+            <div class="it"><div class="t">總部督導受理</div><div class="d">9/19 15:48 · 已完成</div></div>
+            <div class="it open"><div class="t">調查與回覆你</div><div class="d">9/21 15:48 前</div>
+              <span class="tag fix">進行中</span></div>
+            <div class="it open"><div class="t">若成立 → 列入該店待修項</div>
+              <div class="d">公開於本店狀態頁，7 天內完成</div></div>
+          </div>
+        </div>
+        <div class="fine"><b>你可以做什麼｜</b>什麼都不用做。我們會主動聯絡你。
+        若 48 小時內沒收到回覆，這頁會自動出現「已升級」並附上營運副總的聯絡方式。</div>
+      </div>
+    </div></div>
+
+    <div class="anno">
+      <h5>為什麼是這個設計</h5>
+      <ol>
+        <li><b>三個選項，不是自由填寫。</b>自由填寫會得到一堆情緒，選項會得到可歸因的資料。補充欄位放在後面且選填。</li>
+        <li><b>第三個選項直接串 C1。</b>「療程中被推銷」在這裡按下去，就是 C1 零推銷契約的申訴入口——兩案共用一個按鈕，顧客不需要知道我們內部分幾個案子。</li>
+        <li><b>倒數計時對顧客可見。</b>看得到的倒數，才是承諾；看不到的 SLA，是內部 KPI。</li>
+        <li><b>明講「不會影響美療師」。</b>顧客不通報的最大原因是怕害到人。這句話能讓通報率提高數倍。</li>
+        <li><b>逾時自動升級且公開。</b>把我們自己的失誤也做成公開流程，這是整案可信度的最後一道鎖。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ========= 4 ========= -->
+<section id="s4">
+  <div class="sechd"><h2>④ 總部戰情室：80 家店的後台長這樣</h2><span class="who">總部 · 2 人</span></div>
+  <p class="lead">核心設計是<b>例外管理</b>：總部不看 80 家店，只看「逾期的」和「重複出現的」。
+  平常時候這個畫面上只有 4–6 筆需要處理的事，不是 80 筆。</p>
+
+  <div class="desk"><div class="deskbar"><i></i><i></i><i></i><span>admin.vivispa.com.tw / 高光透明榜 · 總部戰情室 · 2027年9月</span></div>
+  <div class="pad">
+    <div class="kpis">
+      <div class="kpi ok"><div class="l">本月已查訪</div><div class="v">76<span style="font-size:14px;color:var(--muted)">/80</span></div><div class="s">剩 4 店排程於 9/22–9/29</div></div>
+      <div class="kpi"><div class="l">燈號分布</div><div class="v" style="font-size:19px">
+        <span style="color:var(--green)">58</span> ·
+        <span style="color:var(--amber)">15</span> ·
+        <span style="color:var(--red)">3</span> ·
+        <span style="color:#B5AFA4">4</span></div><div class="s">綠 · 黃 · 紅 · 未查</div></div>
+      <div class="kpi alert"><div class="l">逾期待修（需你處理）</div><div class="v">3</div><div class="s">超過 7 天承諾期</div></div>
+      <div class="kpi warn"><div class="l">客訴 SLA 最短剩餘</div><div class="v" style="font-size:19px">6:12</div><div class="s">#SJ-0918-017 松江館</div></div>
+    </div>
+
+    <h3 class="bh">需要你今天處理的事 <em>只列例外，全綠與正常改善中的店不出現在這裡</em></h3>
+    <table>
+      <tr><th style="width:120px">門店</th><th style="width:70px">狀態</th><th>項目</th><th style="width:90px">已過天數</th><th style="width:120px">區督導</th><th style="width:130px">動作</th></tr>
+      <tr><td><b>板橋文化館</b><div class="mini">加盟</div></td><td><span class="pill r">紅 · 逾期</span></td>
+        <td>更衣區淋浴間排水異味<div class="mini">9/05 指出 · 店端回報「已叫廠商」但未上傳完成證明</div></td>
+        <td><b style="color:var(--red)">14 天</b></td><td>北二區 · 陳〇〇</td>
+        <td><span class="pill t">總部進駐</span> <span class="pill k">改顯示改善中</span></td></tr>
+      <tr><td><b>台中公益館</b><div class="mini">直營</div></td><td><span class="pill r">紅 · 重複</span></td>
+        <td>療程時長短於標準 10 分鐘<div class="mini">本月第 3 次被指出（9/02、9/11、9/17）</div></td>
+        <td><b style="color:var(--red)">9 天</b></td><td>中一區 · 黃〇〇</td>
+        <td><span class="pill t">排回訓</span> <span class="pill k">查排班</span></td></tr>
+      <tr><td><b>高雄美術館</b><div class="mini">加盟</div></td><td><span class="pill r">紅 · 逾期</span></td>
+        <td>主題療癒月香氛未更換<div class="mini">9/08 指出 · 追蹤發現總部物料未到貨</div></td>
+        <td><b style="color:var(--red)">11 天</b></td><td>南一區 · 李〇〇</td>
+        <td><span class="pill g">判定：總部責任</span></td></tr>
+      <tr><td><b>松江館</b><div class="mini">直營</div></td><td><span class="pill a">客訴 SLA</span></td>
+        <td>顧客通報「療程中被推銷」<div class="mini">#SJ-0918-017 · 同時觸發 C1 當次退費審核</div></td>
+        <td><b style="color:var(--amber)">剩 6:12</b></td><td>北一區 · 王〇〇</td>
+        <td><span class="pill t">立即回覆</span></td></tr>
+    </table>
+
+    <h3 class="bh">AI 系統性問題偵測 <em>同一問題 ≥ 5 店出現 → 自動判定為總部責任，該月不計入門店紅燈</em></h3>
+    <table>
+      <tr><th style="width:250px">重複出現的問題</th><th style="width:80px">店數</th><th style="width:130px">AI 判定</th><th>建議處置</th></tr>
+      <tr><td>主題療癒月香氛未更換 / 濃度不足</td><td><b>9 店</b></td><td><span class="pill t">總部責任</span></td>
+        <td>物料配送排程落後 → 移交採購部，9 店紅燈本月撤銷並於顧客頁註明「總部物料延遲」</td></tr>
+      <tr><td>療後等候時間過長</td><td><b>6 店</b></td><td><span class="pill t">總部責任</span></td>
+        <td>交接班標準時距設計問題 → 修訂 SOP 而非罰店</td></tr>
+      <tr><td>更衣區溫度偏低</td><td>3 店</td><td><span class="pill k">門店個案</span></td>
+        <td>未達 5 店門檻，維持門店自行改善</td></tr>
+    </table>
+    <div class="callout" style="margin-top:14px">
+      <b>這張表是加盟主願意接受公開的關鍵。</b>它證明「公開不是為了罰你」——
+      當一個問題是體系造成的，系統會自動把責任接回總部，並在顧客頁上寫明。
+      這條規則要公開寫在顧客頁與加盟主手冊裡，不能只是內部政策。
+    </div>
+
+    <h3 class="bh">80 店燈號總覽 <em>平常不看這張，只在月底檢視；點任一店進入該店頁</em></h3>
+    <div class="grid80" id="g80"></div>
+    <div class="legend">
+      <span><i style="background:#E8F5EC;border:1px solid #CBE7D4"></i>綠 · 本月無待修 58</span>
+      <span><i style="background:#FDF3E3;border:1px solid #F0DCB6"></i>黃 · 改善中 15</span>
+      <span><i style="background:#FBEAEA;border:1px solid #EFC4C4"></i>紅 · 逾期 3</span>
+      <span><i style="background:#F2EFE9;border:1px solid #E6E1D8"></i>灰 · 尚未查訪 4</span>
+    </div>
+  </div></div>
+</section>
+
+<!-- ========= 5 ========= -->
+<section id="s5">
+  <div class="sechd"><h2>⑤ 店端後台：店長看到的不是分數，是「本月要修的三件事」</h2><span class="who">門店 · 平板／手機</span></div>
+  <p class="lead">店長不需要後台，店長需要一張待辦清單。這頁沒有分數、沒有排名、看不到別家店——
+  這是加盟主治理紅線，也是避免情緒勞動轉嫁到美療師身上的設計。</p>
+
+  <div class="stage">
+    <div class="phone"><div class="screen"><div class="notch"><i></i></div>
+      <div class="cust">
+        <div class="cust-top">
+          <div class="brand">店長後台 · 內湖旗艦館</div>
+          <div class="store">本月要修 1 件</div>
+          <div class="month">9 月 · 已完成 2 件 · 平均 3.1 天</div>
+        </div>
+        <div class="blk" style="margin-top:16px">
+          <div class="task" style="border-color:#F0DCB6;background:var(--amber-bg)">
+            <div class="r1"><div class="tt">更衣區溫度偏低</div><span class="pill a">第 3 天</span></div>
+            <div class="mt">9/16 神秘客指出 · 承諾期 9/23 前<br>
+              預估工時 <b>2 小時</b> · 建議：空調分區獨立控溫，更衣區設定 26°C</div>
+            <div class="act">
+              <button>需要總部支援</button>
+              <button class="p">拍照回報完成</button>
+            </div>
+          </div>
+          <div class="task">
+            <div class="r1"><div class="tt">療程結束後等候時間過長</div><span class="pill g">4 天完成</span></div>
+            <div class="mt">9/03 → 9/07 · 已上傳完成證明</div>
+          </div>
+          <div class="task">
+            <div class="r1"><div class="tt">主題療癒月香氛濃度未達標</div><span class="pill g">2 天完成</span></div>
+            <div class="mt">9/03 → 9/05 · 已上傳完成證明</div>
+          </div>
+        </div>
+        <div class="blk">
+          <div class="badge">
+            <div class="n">7</div>
+            <div class="x">服務不推銷 連續 7 個月零待修<br>顧客頁已顯示此徽章</div>
+          </div>
+        </div>
+        <div class="fine">
+          <b>這頁只有你看得到你自己。</b>你看不到其他門店的狀態，其他門店也看不到你的。
+          總部不以此頁排名門店。<br>
+          <b>本月顧客通報 0 件。</b>顧客通報一律由總部督導調查，調查中不會通知門店，避免影響服務。
+        </div>
+      </div>
+    </div></div>
+
+    <div class="anno">
+      <h5>店端設計的三條紅線</h5>
+      <ol>
+        <li><b>不給分數、不給排名、看不到別家店。</b>一旦店長能看到排名，壓力就會在三天內傳到美療師身上，接著顧客 30 秒評分會開始被「拜託給五星」——整個資料源就污染了。</li>
+        <li><b>每一項待修都附「預估工時」與「建議作法」。</b>不給方法的稽核叫找碴，給方法的稽核叫輔導。這一欄由 AI 依歷史同類問題的實際修復紀錄生成。</li>
+        <li><b>「需要總部支援」是一個按鈕，不是一個流程。</b>按下去即凍結該項的 7 天倒數，責任暫移總部。沒有這個出口，門店會為了不變紅燈而謊報完成。</li>
+      </ol>
+      <div class="callout">
+        <b>顧客 30 秒評分的用途限制：</b>只用於「是否觸發神秘客加查」與「AI 盲區偵測」，
+        一律不得用於個別美療師之考核、薪酬或去留。此條若被違反，整案應立即停止——
+        因為它會把本案從品質工具變成監控工具，而被監控的人不會提供真實資料。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= 6 ========= -->
+<section id="s6">
+  <div class="sechd"><h2>⑥ 神秘客填報：一次查訪 12 分鐘填完</h2><span class="who gray">第三方稽核 · 手機</span></div>
+  <p class="lead">80 店 × 每月 1 次 = 960 次／年。填報必須極輕，否則品質會在第三個月開始崩壞。
+  設計原則：只填「有沒有」，不填「幾分」。分數會有主觀差異，有無比較不會。</p>
+
+  <div class="stage">
+    <div class="phone"><div class="screen"><div class="notch"><i></i></div>
+      <div class="cust">
+        <div class="cust-top" style="background:#3A3A36">
+          <div class="brand">神秘客查訪 · 匿名編號 MS-214</div>
+          <div class="store">內湖旗艦館</div>
+          <div class="month">9/16 14:30 · 本季題組 Q3-B</div>
+        </div>
+        <div class="blk" style="margin-top:16px">
+          <h4>2. 環境與衛生<em>共 8 題 · 已填 6</em></h4>
+          <div class="task"><div class="r1"><div class="tt">更衣區溫度是否舒適</div>
+            <span class="pill r">否</span></div>
+            <div class="mt">補充：明顯偏冷，吹出風口直對更衣座位</div></div>
+          <div class="task"><div class="r1"><div class="tt">療程室香氛是否為本月主題</div>
+            <span class="pill g">是</span></div></div>
+          <div class="task"><div class="r1"><div class="tt">織品是否當次更換（可見標示）</div>
+            <span class="pill g">是</span></div></div>
+        </div>
+        <div class="blk">
+          <h4>3. 服務不推銷<em>與 C1 共用題組</em></h4>
+          <div class="task"><div class="r1"><div class="tt">療程前是否當面說出承諾句</div>
+            <span class="pill g">是</span></div></div>
+          <div class="task"><div class="r1"><div class="tt">療程中是否出現課程／優惠／方案</div>
+            <span class="pill g">否（符合）</span></div></div>
+        </div>
+        <button class="btn dark">送出（自動歸因為三燈號）</button>
+        <div class="fine"><b>不評分、不寫感想、不排名。</b>每季更換題組，門店事前不知道本季考什麼。
+        同一位神秘客不得連續兩季查訪同一家店。</div>
+      </div>
+    </div></div>
+
+    <div class="anno">
+      <h5>從填報到顧客頁，AI 做的三件事</h5>
+      <div class="flow" style="flex-direction:column">
+        <div class="step"><div class="n">STEP 1 · 歸因</div><div class="t">把「否」變成燈號</div>
+          <div class="d">「更衣區溫度是否舒適 = 否」→ 自動歸入〔環境與衛生〕維度，該燈轉黃並啟動 7 天倒數。</div></div>
+        <div class="step"><div class="n">STEP 2 · 白話化</div><div class="t">把稽核語言變成顧客語言</div>
+          <div class="d">內部：「Q3-B-05 更衣區環境溫度未達標準區間」→ 顧客頁：「更衣區溫度偏低，已排定 9/21 完成空調分區調整」。這一步由 AI 生成、督導核可後發布，門店不經手。</div></div>
+        <div class="step"><div class="n">STEP 3 · 比對</div><div class="t">跟外部聲量對照找盲區</div>
+          <div class="d">AI 監測 Threads／Dcard／Google 對各店的公開評論，找出「客人在講、但稽核題組沒問」的項目，回寫為次季新增題目。這是題組每季演化的來源。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= 7 ========= -->
+<section id="s7">
+  <div class="sechd"><h2>⑦ 80 家店怎麼管：例外管理的實際負荷</h2><span class="who gray">營運設計</span></div>
+  <p class="lead">80 店逐店管理不可能，也不需要。整套機制的管理量體設計如下——關鍵在於
+  <b>總部只處理例外（逾期＋系統性問題＋客訴 SLA），其餘全部自動流轉。</b></p>
+
+  <div class="desk"><div class="deskbar"><i></i><i></i><i></i><span>管理負荷試算 · 80 店</span></div>
+  <div class="pad">
+    <table>
+      <tr><th style="width:130px">層級</th><th style="width:150px">人力</th><th style="width:190px">每月負荷</th><th>只做這些事</th></tr>
+      <tr><td><b>第三方神秘客</b></td><td>外包 · 約 20 名輪替</td><td>80 次查訪<br><span class="mini">每人每月約 4 次</span></td>
+        <td>到店查訪 + 12 分鐘填報。不判定、不聯絡門店、不知道結果如何被使用。</td></tr>
+      <tr><td><b>AI 歸因層</b></td><td>系統</td><td>80 份報告自動處理</td>
+        <td>歸因三燈號 → 白話化 → 啟動 7 天倒數 → 偵測系統性問題 → 生成店端待修卡與預估工時。</td></tr>
+      <tr><td><b>區域督導</b><div class="mini">既有編制，不新增</div></td><td>6 區 × 1 人<br><span class="mini">每區約 13 店</span></td>
+        <td>每月約 2–3 件<br><span class="mini">僅該區黃轉紅的店</span></td>
+        <td>黃燈店不介入（門店自理）。只在第 5 天仍未完成時致電提醒，第 7 天未完成則上報總部。</td></tr>
+      <tr><td><b>總部專責</b><div class="mini">本案新增</div></td><td>2 人<br><span class="mini">1 名客訴督導 + 1 名內容核可</span></td>
+        <td>約 4–6 件／日<br><span class="mini">客訴 + 逾期 + 發布核可</span></td>
+        <td>① 客訴 48 小時回覆 ② 逾期店進駐處置 ③ 每日核可 AI 生成的顧客頁白話敘述（約 3 分鐘／店）。</td></tr>
+      <tr><td><b>加盟事業部</b><div class="mini">既有編制</div></td><td>—</td><td>季度 1 次</td>
+        <td>加盟主季度說明會、治理紅線落實、爭議協調。</td></tr>
+    </table>
+
+    <h3 class="bh">為什麼 2 個人就管得動 80 家店</h3>
+    <div class="flow">
+      <div class="step"><div class="n">自動 1</div><div class="t">綠燈店完全不經人手</div>
+        <div class="d">58 店／月為綠燈，AI 歸因完成即直接發布，總部不需要看。</div></div>
+      <div class="step"><div class="n">自動 2</div><div class="t">黃燈店由門店自理</div>
+        <div class="d">15 店／月為改善中，7 天內完成即自動轉綠。督導不介入、總部不看。</div></div>
+      <div class="step"><div class="n">人工 1</div><div class="t">紅燈才進總部視野</div>
+        <div class="d">僅 3 店／月。這才是總部 2 人要處理的實際量。</div></div>
+      <div class="step"><div class="n">人工 2</div><div class="t">客訴走 SLA 佇列</div>
+        <div class="d">依剩餘時間排序，最緊急的永遠在最上面，不需要判斷先做哪一件。</div></div>
+      <div class="step"><div class="n">分流</div><div class="t">系統性問題自動轉出</div>
+        <div class="d">≥5 店重複的問題不進門店佇列，直接轉採購／訓練／SOP 對應部門。</div></div>
+    </div>
+
+    <h3 class="bh">直營 vs 加盟的差別處理</h3>
+    <div class="two">
+      <div class="box"><h6>直營店</h6>
+        <div class="mini">全部項目強制納入。逾期由總部直接進駐處置，改善成本由總部承擔。
+        店長考核納入「平均修復天數」，<b>不納入紅燈次數</b>——罰慢不罰有。</div></div>
+      <div class="box"><h6>加盟店</h6>
+        <div class="mini">燈號標準完全相同，但：① 改善成本若屬設備／物料，總部補助 50%；
+        ② 系統性問題一律不計入該店紅燈；③ 總部不得以透明榜結果作為加盟續約的單一依據；
+        ④ 加盟主人事與薪酬事務不在本案範圍內。<br><br>
+        <b>上線方式：</b>首年自願加入（預估 6 成），第二年起新約強制、舊約續約時納入。
+        不強推——第一批自願店的成效數字，會比任何說明會都有說服力。</div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ========= 8 ========= -->
+<section id="s8">
+  <div class="sechd"><h2>⑧ 上線步驟與 80 店預算（修正版）</h2><span class="who gray">執行</span></div>
+  <p class="lead">原提案以 36 店試算，依實際 80 店重算如下。</p>
+
+  <div class="desk"><div class="deskbar"><i></i><i></i><i></i><span>80 店預算 · 假設值</span></div>
+  <div class="pad">
+    <table>
+      <tr><th style="width:170px">項目</th><th>內容</th><th style="width:180px">計算式</th><th style="width:120px">金額 (NT$)</th></tr>
+      <tr><td>狀態頁系統</td><td>顧客頁、店端待修卡、總部戰情室、AI 歸因與白話化、客訴 SLA 佇列</td><td>一次性</td><td><b>1,600,000</b></td></tr>
+      <tr><td>神秘客</td><td>每月 1 次 × 80 店</td><td>3,500 × 12 × 80</td><td><b>3,360,000</b></td></tr>
+      <tr><td>門市物料</td><td>門口 QR/一觸即發 立牌、床邊卡、更衣區指引</td><td>3,000 × 80</td><td><b>240,000</b></td></tr>
+      <tr><td>總部專責人力</td><td>客訴督導 1 名 + 內容核可 1 名</td><td>70 萬 × 2</td><td><b>1,400,000</b></td></tr>
+      <tr><td>加盟主溝通</td><td>季度說明會 × 4、治理紅線手冊、Q&amp;A 專線</td><td>一次性</td><td><b>280,000</b></td></tr>
+      <tr><td>加盟店改善補助</td><td>設備／物料類改善總部補助 50%（首年估列）</td><td>年度提列</td><td><b>1,200,000</b></td></tr>
+      <tr style="background:#F2EFE9"><td colspan="3"><b>首年合計</b></td><td><b style="color:var(--teal)">8,080,000</b></td></tr>
+      <tr><td colspan="3"><b>第二年起／年</b><div class="mini">扣除一次性系統開發與加盟主溝通</div></td><td><b>6,200,000</b></td></tr>
+    </table>
+    <div class="mini" style="margin-top:10px">原 36 店版本為首年 370 萬。放大至 80 店後主要增幅來自神秘客（151萬 → 336萬）與新增的加盟店改善補助。
+    仍為三案中投報率最高者——稽核本來就要做，增量只在「公開」這個動作與其配套。</div>
+
+    <h3 class="bh">上線步驟</h3>
+    <div class="flow">
+      <div class="step"><div class="n">Q1 · 系統</div><div class="t">建規則、先不公開</div>
+        <div class="d">燈號定義定案、題組設計、系統開發、加盟主說明會。<b>全 80 店先跑 2 個月「不公開的影子期」</b>——
+        累積真實數據並確認修復天數做得到，再對外。</div></div>
+      <div class="step"><div class="n">Q2 · 公開</div><div class="t">直營全數 + 自願加盟</div>
+        <div class="d">併入品牌宣言日發布。首批公開店數估 55–60 店。未加入的店門口不掛 QR/一觸即發，不做任何說明——
+        顧客自己會問，而這個問題會變成加盟主加入的動力。</div></div>
+      <div class="step"><div class="n">Q3 · 加速</div><div class="t">季報 + 徽章 + 導客</div>
+        <div class="d">公開第一份高光季報；啟用連續達標徽章；AI「附近全綠有空位」導客功能上線——
+        這時透明度開始直接換成客流。</div></div>
+      <div class="step"><div class="n">Q4 · 榮耀</div><div class="t">年度榜與 2028 擴大</div>
+        <div class="d">年度高光榜與門店表揚；NPS 大調查與透明榜數據交叉驗證；
+        依首年成效決定 2028 是否全體系強制。</div></div>
+    </div>
+
+    <div class="callout" style="margin-top:18px">
+      <b>最關鍵的一步是 Q1 的「影子期」。</b>兩個月不公開、照常查訪、照常要求 7 天修復——
+      先確認我們真的做得到，再把 QR/一觸即發 掛上門口。<br>
+      如果影子期跑出來的平均修復天數是 15 天，那就不是延後公開的問題，是這案根本還不能做。
+      寧可延後半年，不可先公開再補。
+    </div>
+  </div></div>
+</section>
+
+<div class="footnote">
+  <b>本樣張的性質｜</b>這是介面與運作邏輯的設計樣張，不是已開發的系統。畫面中所有門店名稱、日期、案號、數字均為示意。<br>
+  <b>待確認｜</b>① 實際門店數與直營／加盟比例 ② 現行神秘客頻率與稽核項目（品質稽核部）③ 區域督導現行編制與轄區劃分
+  ④ 加盟合約中關於品質稽核與資訊揭露的既有條款（法務）。<br>
+  <b>VIVISPA 2027 · 方針二 高光透明榜 · 介面樣張 v1（tav）</b>
+</div>
+
+</div>
+
+<script>
+// 80 店燈號矩陣
+const names=["內湖旗艦","松江","南京東","忠孝敦化","信義","天母","士林","大直","中山","西門",
+"板橋文化","板橋府中","新莊","三重","中和","永和","土城","樹林","新店","汐止",
+"桃園中正","中壢","南崁","八德","平鎮","新竹光復","竹北","竹科","頭份","苗栗",
+"台中公益","台中七期","逢甲","豐原","太平","大里","沙鹿","彰化","員林","南投",
+"嘉義","斗六","虎尾","新營","台南中西","台南東區","永康","安平","善化","歸仁",
+"高雄美術","高雄巨蛋","左營","鳳山","前鎮","楠梓","岡山","屏東","潮州","恆春",
+"宜蘭","羅東","花蓮","台東","基隆","金門","淡水","林口","龜山","蘆洲",
+"三峽","鶯歌","北投","木柵","景美","萬華","大安","松山","南港","內湖二"];
+const red=[10,30,50];            // 板橋文化 / 台中公益 / 高雄美術
+const gray=[68,69,74,77];
+const amber=[3,7,14,21,26,33,38,41,45,52,57,61,66,71,76];
+const g=document.getElementById('g80');
+names.forEach((n,i)=>{
+  let c='g';
+  if(red.includes(i))c='r'; else if(gray.includes(i))c='n'; else if(amber.includes(i))c='a';
+  const d=document.createElement('div');
+  d.className='cellx '+c;
+  d.innerHTML='<span>'+n+'</span>';
+  d.title=n+'館';
+  g.appendChild(d);
+});
+</script>
+</body>
+</html>
